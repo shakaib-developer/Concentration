@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="796-WG-Eby">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f5Q-mL-wdU">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,14 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="a4f-oJ-QPe">
-                                <rect key="frame" x="119" y="335" width="137" height="196"/>
+                                <rect key="frame" x="119" y="310.66666666666669" width="137" height="196"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2V-fk-mJL">
                                         <rect key="frame" x="12" y="0.0" width="113" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Sports"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Choose Theme" id="eD9-cN-9IS"/>
+                                            <action selector="changeTheme:" destination="p6i-nG-opp" eventType="touchUpInside" id="V6a-y3-e75"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8o-fC-Krv">
@@ -35,7 +35,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Faces"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Choose Theme" id="yR0-Hf-YAQ"/>
+                                            <action selector="changeTheme:" destination="p6i-nG-opp" eventType="touchUpInside" id="h5i-QE-IZk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ja-wd-YxJ">
@@ -43,7 +43,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="Animals"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Choose Theme" id="Pzn-jn-hI2"/>
+                                            <action selector="changeTheme:" destination="p6i-nG-opp" eventType="touchUpInside" id="5cU-0Y-zot"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -57,15 +57,70 @@
                         <viewLayoutGuide key="safeArea" id="Qyk-UB-U4M"/>
                     </view>
                     <navigationItem key="navigationItem" id="vQ7-OP-zFV"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Choose Theme" id="dg0-Wf-x1B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81t-FZ-3C3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-503.19999999999999" y="-5.1724137931034484"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Item 2-->
+        <scene sceneID="yPe-Ik-MkL">
+            <objects>
+                <viewController id="GZU-Wc-6zt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Egs-0d-HqM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cWz-Rv-dap"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="yl6-qy-8Q8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNe-Xg-BlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2905" y="1794"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="V3S-U3-pSN">
+            <objects>
+                <viewController id="dZS-GI-NXE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6vu-w6-nth">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pLl-2w-Fms"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="kLT-ko-bPg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GF9-46-Zmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2905" y="1141"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="x06-uL-KPn">
+            <objects>
+                <tabBarController id="f5Q-mL-wdU" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kLy-bZ-Xxw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="796-WG-Eby" kind="relationship" relationship="viewControllers" id="qdw-XM-elA"/>
+                        <segue destination="dZS-GI-NXE" kind="relationship" relationship="viewControllers" id="T1Q-gN-YuG"/>
+                        <segue destination="GZU-Wc-6zt" kind="relationship" relationship="viewControllers" id="Xb3-fp-2h9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZYv-Sb-qSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4414" y="367"/>
+        </scene>
+        <!--Concentration-->
         <scene sceneID="Ni4-KQ-7JI">
             <objects>
                 <splitViewController id="796-WG-Eby" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Concentration" id="eie-lk-iNH"/>
                     <connections>
                         <segue destination="4Uo-aO-usr" kind="relationship" relationship="masterViewController" id="wcl-eu-97g"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="bZi-Bt-7fK"/>
@@ -200,7 +255,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkg-eE-gER">
-                                <rect key="frame" x="121.33333333333333" y="708" width="132.33333333333337" height="48"/>
+                                <rect key="frame" x="121.33333333333333" y="659" width="132.33333333333337" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -257,6 +312,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yR0-Hf-YAQ"/>
+        <segue reference="bZi-Bt-7fK"/>
     </inferredMetricsTieBreakers>
 </document>
